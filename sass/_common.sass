@@ -73,6 +73,48 @@ a
 		&:hover
 			border-bottom: 1px dashed #a9773a
 			color: #A9773A 
+			
+
+.nav-i
+	+nav
+	li
+		//width: 130px
+		text-align: center
+		border-left: 1px solid #E4E2E2 
+		height: 95px
+		padding: 0 33px
+		padding-top: 6px 
+		+box
+		&:first-child
+			border-left: none 
+	a			
+		color: #000
+		font-family: "OpenSans", sans-serif
+		font-size: 12px
+		font-weight: bold
+		line-height: 14px
+		text-decoration: none
+		display: inline-block
+		.ico
+			margin-bottom: 10px
+		&:hover
+			.i-delivery
+				+s(i-delivery_h)
+			.i-load
+				+s(i-load_h)
+			.i-garant
+				+s(i-garant_h)
+			.i-present
+				+s(i-present_h)
+			.i-garant-years
+				+s(i-garant-years_h)
+			.i-return		
+				+s(i-return_h)
+		&:active
+			color: $orange
+			.ico
+				+transform(scale(0.95))		
+
 /*----------header--------------------------------------------*/
 .header
 	position: relative
@@ -233,10 +275,9 @@ a
 		+transform(scale(0.95))		
 
 
-
-
 .header__bottom
 	background: #fbf9f9 
+	padding: 18px 0 27px 
 /*-----text-vert---------------------*/
 .text-vert
 	height: 40px
@@ -275,6 +316,19 @@ a
 	+s(i-search)	
 .i-search_mini
 	+s(i-search_mini)	
+.i-delivery
+	+s(i-delivery)
+.i-load
+	+s(i-load)
+.i-garant
+	+s(i-garant)
+.i-present
+	+s(i-present)
+.i-garant-years
+	+s(i-garant-years)
+.i-return		
+	+s(i-return)
+
 /*----------logo------------------------*/
 .logo
 	+hide-text
