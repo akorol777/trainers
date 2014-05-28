@@ -1,0 +1,302 @@
+$orange: #d9a360
+$h-label: 39px
+body
+	font-family: "Myriad Pro" 
+	color: #2f3339
+	min-width: 1000px	
+.container
+	width: 920px
+	margin: 0 auto
+	+box 
+a
+	+transition(0.3s)	
+	color: #2f3339
+.color
+	color: $orange	
+/*----------nav----------------------------------*/
+.nav-out
+	background: #dadada 
+	background: rgba(218,218,218,0.9) 
+	width: 100% 
+	text-align: center
+	position: fixed
+	z-index: 100
+	+box
+	.container
+		text-align: center
+		+box
+.nav
+	display: inline-block
+	height: 28px
+	+box
+	+nav							
+.nav__main	//li
+	color: #2f3339
+	font:
+		family: "Myriad Pro"
+		size: 16px
+	line-height: 32px
+	border-top: 4px solid transparent
+	position: relative
+	margin: 0 10px 
+	position: relative
+	display: block
+	text-align: center	
+	cursor: pointer
+	&:hover
+		border-top: 4px solid #d9a35f		
+	&.click
+		border-top: 4px solid #d9a35f
+		ul
+			left: 0px
+			top: 28px		
+.nav__drop	//	ul
+	position: absolute
+	left: -9999px
+	padding: 10px 15px
+	background: #fff
+	+box-shadow	(0px 3px 5px 0px rgba(0,0,0,0.4)) 
+.nav__item	//	li
+	width: 160px
+	text-align: left
+	+box
+	a
+		display: inline-block
+		color: #000
+		font-family: arial, sans-serif
+		text-decoration: none
+		cursor: pointer
+		font:
+			family: "Myriad Pro"
+			size: 14px
+		line-height: 16px	
+		&:hover
+			border-bottom: 1px dashed #a9773a
+			color: #A9773A 
+/*----------header--------------------------------------------*/
+.header
+	position: relative
+.header__acide
+	display: inline-block
+	height: 260px
+	width: 40px
+	position: absolute
+	top: 15px
+	font-size: 10px
+	line-height: 10px 
+	text-align: center
+	padding-top: 30px
+	border:
+		bottom: 1px solid #e4e2e2
+		top: 1px solid #e4e2e2	
+	+box
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline	
+	.label
+		margin-bottom: 15px	
+	.text-vert
+		position: absolute		
+.header__right
+	float: right
+	right: -40px
+	@extend .header__acide
+.header__left
+	float: left
+	left: -40px
+	@extend .header__acide
+.header__center
+	text-align: center		 
+.header__top
+	background: #f4f0f0 
+	.container
+		position: relative
+.header__topper
+	padding: 48px 0 0px 
+	text-align: center
+	margin-bottom: 17px
+.header__topper-left
+	text-align: right
+	display: inline-block
+	vertical-align: top
+.header__topper-right
+	text-align: left
+	display: inline-block
+	vertical-align: top
+.header__topper-center
+	display: inline-block
+	margin: 0 85px 		
+.header__title
+	text-align: center
+	font-weight: 900 
+	font-size: 15px
+	line-height: 15px
+	display: inline-block
+	position: relative
+	margin-bottom: 18px
+	&:after, &:before
+		content: ""
+		position: absolute
+		top: 10px
+		display: inline-block
+		background: #dddada
+		height: 1px
+		width: 115px 
+	&:after
+		left: -140px			
+	&:before	 	
+		right: -140px 
+.header__search
+	padding-bottom: 11px	
+///////////////////////////////////////////////
+.search
+	display: inline-block
+	background: #fff
+	padding: 0 10px  
+	margin-right: 7px
+	height: 22px
+	+box
+	+border-radius(10px)
+	.ico
+		vertical-align: baseline
+		margin-right: 4px
+.dropdown//ul
+	display: inline-block
+.dropdown__main//li
+	position: relative
+	cursor: pointer
+	color: #443b3b
+	font-family: "Verdana"
+	font-size: 11px
+	line-height: 19px	
+	padding: 0 15px 0 5px
+	margin-right: 4px
+	&:after
+		position: absolute
+		content: ""
+		display: inline-block
+		top: 8px
+		right: 7px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 4px 2.5px 0 2.5px
+		border-color: #443b3c transparent transparent transparent	  
+	&.click
+		background-color: #fff		
+		+border-radius(0 0 3px 3px / 0 0 4px 4px)
+		+border-radius(2px)
+		+box-shadow(inset 0 1px 1px rgba(0,0,0,.29))
+		ul
+			left: 0px
+			top: 21px		
+.dropdown__drop//ul
+	position: absolute
+	top: 0px
+	left: -9999px 
+	text-align: left 
+	padding: 9px 6px
+	text-decoration: none 
+	width: 215px
+	background-color: #fff
+	+box-shadow(0 5px 13px rgba(0,0,0,.15))
+	+box
+.dropdown__item//li
+	a
+		display: block
+		padding: 0 10px 
+		text-decoration: none
+		&:hover
+			background-color: #77b303
+			color: #fff
+			+border-radius(3px)
+.search__inp	
+	width: 200px
+	font-size: 14px
+	line-height: 14px
+	color: #000 
+	+box
+	+placeholder-color(#000)	
+.search__btn
+	background-color: #242424
+	height: 22px
+	width: 22px
+	line-height: 22px
+	@include box-shadow(0 0 5px rgba(0,0,0,.47))
+	@include border-radius(50%)	
+	.ico
+		vertical-align: baseline
+	&:hover
+		+opacity(0.9)
+	&:active
+		+transform(scale(0.95))		
+
+
+
+
+.header__bottom
+	background: #fbf9f9 
+/*-----text-vert---------------------*/
+.text-vert
+	height: 40px
+	width: 200px
+	margin: 85px 0 0px -70px 
+	text-align: right
+	+transform(rotate(270deg))
+	a
+		font-size: 14px
+		line-height: 22px
+/*-----label--------------------------*/
+.label
+	display: inline-block
+	height: $h-label
+	width: $h-label
+	line-height: $h-label 
+	background: $orange 
+	+border-radius(50%)
+	.ico
+		vertical-align: -7px 
+	&:hover
+		background: $orange+#101010
+	&:active
+		+transform(scale(0.95))	
+/*----------ico-------------------------*/
+.ico
+	display: inline-block
+	vertical-align: middle
+.i-lock
+	+s(i-lock)
+.i-buy
+	+s(i-buy)	
+.i-phone
+	+s(i-phone)	
+.i-search
+	+s(i-search)	
+.i-search_mini
+	+s(i-search_mini)	
+/*----------logo------------------------*/
+.logo
+	+hide-text
+	img
+/*----------phone----------------------*/
+.phone
+	.ico
+		margin-right: 5px 
+.phone__link	
+	font-size: 18px
+	line-height: 16px
+	text-decoration: none
+	&:hover
+		color: $orange
+	strong
+		font-size: 20px
+
+
+
+
+
+
+
+
+
