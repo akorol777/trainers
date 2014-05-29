@@ -1,4 +1,5 @@
 $orange: #d9a360
+$green: #A9773A
 $h-label: 39px
 body
 	font-family: "Myriad Pro" 
@@ -72,13 +73,12 @@ a
 		line-height: 16px	
 		&:hover
 			border-bottom: 1px dashed #a9773a
-			color: #A9773A 
+			color: $green 
 			
 
 .nav-i
 	+nav
 	li
-		//width: 130px
 		text-align: center
 		border-left: 1px solid #E4E2E2 
 		height: 95px
@@ -190,7 +190,7 @@ a
 	&:before	 	
 		right: -140px 
 .header__search
-	padding-bottom: 11px	
+	padding-bottom: 11px		
 ///////////////////////////////////////////////
 .search
 	display: inline-block
@@ -242,6 +242,7 @@ a
 	text-decoration: none 
 	width: 215px
 	background-color: #fff
+	z-index: 2
 	+box-shadow(0 5px 13px rgba(0,0,0,.15))
 	+box
 .dropdown__item//li
@@ -273,11 +274,52 @@ a
 		+opacity(0.9)
 	&:active
 		+transform(scale(0.95))		
-
-
 .header__bottom
 	background: #fbf9f9 
 	padding: 18px 0 27px 
+/*-----headline---------------------------------*/
+.headline
+	min-width: 920px
+	background: #151515  
+	text-align: center
+	padding: 14px 0px 6px 
+.headline__title
+	color: #fff
+	font-size: 35px
+	line-height: 35px
+	position: relative
+	display: inline-block
+	&:after,&:before
+		top: 50%		 
+		position: absolute
+		content: ""
+		display: inline-block
+		height: 1px
+		width: 85px
+		background: #2d2d2d  
+	&:after
+		right: -122px 
+	&:before
+		left: -122px 
+.headline__bread
+	li
+		display: inline-block
+		&:first-child
+			a
+				color: #e8b66d
+	a	
+		text-decoration: none
+		color: #e8b66d
+		line-height: 22px
+		color: #8A8B8D 
+		font:
+			family: "Times New Roman"
+			size: 14px
+			style: italic
+		&:hover
+			text-decoration: underline
+		 	
+
 /*-----text-vert---------------------*/
 .text-vert
 	height: 40px
