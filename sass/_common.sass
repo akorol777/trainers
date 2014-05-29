@@ -1,5 +1,5 @@
 $orange: #d9a360
-$green: #A9773A
+$green: #77b303
 $h-label: 39px
 body
 	font-family: "Myriad Pro" 
@@ -9,6 +9,7 @@ body
 	width: 920px
 	margin: 0 auto
 	+box 
+	+clr
 a
 	+transition(0.3s)	
 	color: #2f3339
@@ -22,6 +23,7 @@ a
 	text-align: center
 	position: fixed
 	z-index: 100
+	min-width: 920px 	
 	+box
 	.container
 		text-align: center
@@ -72,10 +74,8 @@ a
 			size: 14px
 		line-height: 16px	
 		&:hover
-			border-bottom: 1px dashed #a9773a
-			color: $green 
-			
-
+			border-bottom: 1px dashed $orange
+			color: $orange 
 .nav-i
 	+nav
 	li
@@ -209,8 +209,9 @@ a
 	position: relative
 	cursor: pointer
 	color: #443b3b
-	font-family: "Verdana"
-	font-size: 11px
+	font:
+		family: "Verdana"
+		size: 11px
 	line-height: 19px	
 	padding: 0 15px 0 5px
 	margin-right: 4px
@@ -251,7 +252,7 @@ a
 		padding: 0 10px 
 		text-decoration: none
 		&:hover
-			background-color: #77b303
+			background-color: $green//#77b303
 			color: #fff
 			+border-radius(3px)
 .search__inp	
@@ -318,8 +319,75 @@ a
 			style: italic
 		&:hover
 			text-decoration: underline
-		 	
+/*-----main-----------------------------------*/
+.main
+	padding: 15px 0 0 25px 
+	+clr
+.main__left
+	float: left
 
+	
+
+
+.main__right
+	float: right
+	
+				
+/*-----trainers---------------------*/
+.trainers //ul
+.trainers__main //li
+	font:
+		family: "Verdana"
+		size: 11px
+	line-height: 16px
+	position: relative
+	&:hover
+		cursor: pointer
+		&:after
+			border-color: transparent transparent transparent $green
+		span
+			color: $green
+			border-bottom: 1px dashed $green
+	span
+		display: inline-block
+		padding-top: 4px
+		margin-bottom: 4px
+		border-bottom: 1px dashed transparent	
+	&:after,&:before
+		position: absolute
+		content: ""
+		display: inline-block	
+	&:before
+		height: 1px
+		width: 100%
+		@include background-image(linear-gradient(left, rgba(211,211,211,0) 0%, rgba(211,211,211,0.9) 50%, rgba(211,211,211,0) 100%))			
+	&:first-child:before
+		display: none	
+	&:after	
+		content: ""
+		top: 40%
+		right: -5px 
+		width: 0
+		height: 0
+		border: 
+			style: solid
+			width: 3.5px 0 3.5px 5px
+			color: transparent transparent transparent #bcbcbc
+		 
+.trainers__drop //ul
+	display: none//KILL
+.trainers__item //li
+	a		 
+  
+
+/*-----block------------------------*/
+.block
+	width: 218px
+	background: #eeeaea 
+	padding: 10px 14px	
+	+clr	
+	+border-radius(3px)
+	+box 
 /*-----text-vert---------------------*/
 .text-vert
 	height: 40px
